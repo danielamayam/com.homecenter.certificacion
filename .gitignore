@@ -93,7 +93,6 @@ hs_err_pid*
 
 .gradle
 
-build/
 
 # Ignore Gradle GUI config
 
