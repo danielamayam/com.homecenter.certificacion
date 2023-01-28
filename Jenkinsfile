@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('Clonar repositorio') {
             steps {
-                git 'https://github.com/danielamayam/com.homecenter.certificacion.git'
-            }
+                            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'choucair', url: 'https://github.com/danielamayam/com.homecenter.certificacion.git']]])
+                        }
         }
     stage('Compilación') {
                 steps {
